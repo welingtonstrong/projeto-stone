@@ -1,0 +1,65 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testeSalarial
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string nome;
+            double salario;
+
+            //Solicitar intererações entre o usuários
+            Console.WriteLine("Vamos verificar sua fortuna!\n");
+            //resp = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Digite o seu nome:");
+            nome = Console.ReadLine();
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Digite seu salário do mês:");
+            salario = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("\n");
+
+            // Mostrar menu de opcoes
+            Console.WriteLine(("Escolha uma opção da lista, digitando somente a 1ª letra:\n"));
+            Console.WriteLine("h - Hora");
+            Console.WriteLine("d - Dia");
+            Console.WriteLine("s - Semana");
+            Console.WriteLine("m - Mês");
+            Console.WriteLine("a - Ano");
+            Console.WriteLine("\n");
+
+            //Realizar a ação de acordo com a opção escolhida
+            switch (Console.ReadLine())
+            {
+                case "h":
+                    Console.WriteLine("\n");
+                    Console.WriteLine($"O salário por hora o dia: R${salario / 160}");
+                    break;
+                case "d":
+                    Console.WriteLine("\n");
+                    Console.WriteLine($"O salário por dia: R${salario / 30}");
+                    break;
+                case "s":
+                    Console.WriteLine("\n");
+                    Console.WriteLine($"O salário por semana: R${salario / 4}");
+                    break;
+                case "m":
+                    Console.WriteLine("\n");
+                    Console.WriteLine($"O salário por mês: R${salario * 1}");
+                    break;
+                case "a":
+                    Console.WriteLine("\n");
+                    Console.WriteLine($"O salário por ano: R${salario * 12}");
+                    break;
+            }
+            Console.WriteLine("\n");
+       
+                  Console.Write("Agora,que já sabe a fortuna que tem!!!\nBorá pagar o pastel da feira, kkk...\n''A Turma toda está cheio de fome''");
+                 
+                  Console.ReadKey();
